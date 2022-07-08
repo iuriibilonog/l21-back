@@ -8,9 +8,10 @@ class UsersController {
 
       const userData = await userService.contacts(name, phone, email);
 
-      return res.status(201).json(userData);
+      return res.status(200).json(userData);
     } catch (e) {
       next(e);
+      console.log("e", e);
     }
   }
 }
